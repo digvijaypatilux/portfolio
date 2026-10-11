@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0b">
 <title>Digvijay Patil — UI/UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,6 +290,59 @@ nav .btn.th svg{width:15px;height:15px}
 .kit{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:84px}
 .kit .eyebrow{margin-bottom:14px}.kit .chips{margin:0}
 @media(max-width:820px){.about2{grid-template-columns:1fr}.me{max-width:440px}.kit{grid-template-columns:1fr;gap:32px;margin-top:56px}}
+/* responsive: tablet + mobile */
+html,body{overflow-x:clip}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn.th.menu{display:none}
+nav .bar{position:relative}
+@media(pointer:coarse){nav .btn.res{height:40px}nav .btn.th{width:40px;height:40px}}
+@media(max-width:1024px){
+.wk{position:static;grid-template-columns:1fr;gap:26px;padding:62px 22px 24px;border-radius:30px;margin-bottom:20px}
+.wk .yr{right:26px}
+.vis{min-height:300px}
+.wk h3{font-size:clamp(24px,4.4vw,34px)}
+.bento{grid-template-columns:repeat(2,1fr)}
+.tile.a,.tile.c{grid-column:span 2}
+.about2{gap:40px}
+}
+@media(max-width:820px){
+.btn.th.menu{display:inline-flex}
+nav.open{transform:none!important}
+nav.open .pill{display:flex;flex-direction:column;gap:0;position:absolute;left:clamp(20px,6vw,80px);right:clamp(20px,6vw,80px);top:calc(100% + 8px);padding:8px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 24px 60px -20px rgba(0,0,0,.5);z-index:30}
+nav.open .pill a{padding:14px 16px;font-size:16px;border-radius:12px}
+nav.open .pill a::after{display:none}
+nav.open .pill a:active,nav.open .pill a:hover{background:var(--line)}
+.brand{font-size:14px}
+h2.rv{filter:none}
+.hero{padding-bottom:36px}
+.stat b{font-size:56px}
+.quote{width:min(300px,82vw)}
+.step{padding:18px}
+}
+@media(max-width:560px){
+section{padding:60px 0}
+.bento{grid-template-columns:1fr}
+.tile{min-height:170px}.tile.a,.tile.c{grid-column:auto}
+.wk{padding:58px 16px 20px;border-radius:26px}
+.wk .no{left:16px}.wk .yr{right:20px}
+.vis{min-height:240px;padding:16px}
+.win{width:88%}
+.acts .vm{flex:1 1 auto}
+.hero .hl{font-size:clamp(28px,8.6vw,40px)}
+.hero .id{font-size:14px;letter-spacing:.12em}
+.hero .sub{font-size:13px}
+.hero .sub b{margin:0 .35em}
+.wrap{padding-left:20px;padding-right:20px}
+.row h4{font-size:20px}
+.soc{flex-direction:column;align-items:center;gap:12px}
+.mk{font-size:28px}
+.frame{border-radius:28px;padding:10px}.frame img{border-radius:20px}
+.frame .tint{inset:10px;border-radius:20px}
+.me figcaption{font-size:9px;flex-direction:column;gap:4px}
+.kit{margin-top:44px}
+.cta,.end h2{max-width:100%}
+}
 </style>
 </head>
 <body>
@@ -311,7 +365,7 @@ step();
 <nav id="nav"><div class="wrap bar">
 <a href="#top" class="brand"><span class="mk">D</span>Digvijay Patil<span class="tagline">— UI/UX Designer</span></a>
 <div class="pill"><a href="#top">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-<div class="btns"><a class="btn res" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a><button class="btn th" id="theme" aria-label="Toggle theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div>
+<div class="btns"><a class="btn res" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a><button class="btn th" id="theme" aria-label="Toggle theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button class="btn th menu" id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
 </div></nav>
 
 <main id="top">
@@ -507,6 +561,17 @@ if(mq)addEventListener('scroll',function(){vel=scrollY-last;last=scrollY;if(!run
 (function(){var e=document.getElementById('seen');if(!e)return;
 function t(){try{e.textContent='Seen at '+new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata',weekday:'long',year:'numeric',month:'long',day:'numeric',hour:'numeric',minute:'2-digit'})}catch(x){}}
 t();setInterval(t,30000)})();
+</script>
+<script>
+/* mobile menu */
+(function(){var nav=document.getElementById('nav'),b=document.getElementById('menu');if(!b)return;
+function set(o){nav.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+b.addEventListener('click',function(e){e.stopPropagation();set(!nav.classList.contains('open'))});
+nav.querySelectorAll('.pill a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+document.addEventListener('click',function(e){if(!nav.contains(e.target))set(false)});
+addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+addEventListener('resize',function(){if(innerWidth>820)set(false)});
+})();
 </script>
 </body>
 </html>
