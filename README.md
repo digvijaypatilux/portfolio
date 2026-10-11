@@ -13,9 +13,11 @@ Then open http://localhost:8000
 ## Structure
 
 ```
-index.html          page markup, styles and scripts
+index.html                      homepage
+case-study-laxmi-dental.html    Laxmi Dental case study page
 assets/portrait.webp  hero portrait (transparent background)
 assets/me.webp        About section photo
+assets/cs/            case study images
 ```
 
 ## Deploy with GitHub Pages
