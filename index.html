@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <title>Digvijay Patil — UI/UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -345,6 +349,17 @@ section{padding:60px 0}
 }
 .vis .shotimg{position:relative;width:92%;max-width:540px;height:auto;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.65);transform:rotate(-2deg);transition:transform .5s}
 .wk:hover .shotimg{transform:rotate(0) translateY(-8px) scale(1.03)}
+/* nav background on scroll */
+nav{border-bottom:1px solid transparent;transition:transform .3s,background .3s,border-color .3s}
+nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom-color:var(--line)}
+.eyebrow::after{display:none!important}
+.vis .shotimg.mk{width:100%;max-width:none;border-radius:0;box-shadow:none;transform:none;filter:drop-shadow(0 28px 34px rgba(0,0,0,.55))}
+.wk:hover .shotimg.mk{transform:translateY(-6px) scale(1.02)}
+.soc a{display:inline-flex;align-items:center;gap:10px}
+.soc svg{width:18px;height:18px;flex:none;color:var(--accent)}
+/* what-i-do scroll text reveal */
+.big .rw{opacity:.16;transition:opacity .3s linear}
+.big .rw.on{opacity:1}
 </style>
 </head>
 <body>
@@ -363,7 +378,7 @@ if(t<1){setTimeout(step,16)}else{bar.style.width='100%';num.textContent='100%';t
 step();
 })();
 </script>
-<div id="prog" style="top:env(safe-area-inset-top,0px)"></div>
+
 <nav id="nav"><div class="wrap bar">
 <a href="#top" class="brand"><span class="mk">D</span>Digvijay Patil<span class="tagline">— UI/UX Designer</span></a>
 <div class="pill"><a href="#top">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
@@ -380,23 +395,23 @@ step();
 </div></section>
 
 <section style="padding-top:60px"><div class="wrap">
-<p class="eyebrow rv">◦ What I do ◦</p>
+<p class="eyebrow rv">◦ What I do</p>
 <p class="big rv">I turn complex problems into simple, intuitive digital <em>experiences</em> — designing products that are easy to understand, built to scale, and focused on what truly matters to users and businesses.</p>
 <div class="stats rv"><div class="stat"><b>3+</b>Years designing<p class="muted">AI-powered SaaS and enterprise products.</p></div><div class="stat"><b>15+</b>Products shipped<p class="muted">Across Healthtech, HRMS, fintech &amp; more at Sphinx Solutions.</p></div></div>
 </div></section>
 
 <section id="work"><div class="wrap">
-<p class="eyebrow rv">◦ 01 ◦ Selected work</p>
+<p class="eyebrow rv">◦ Selected work</p>
 <h2 class="rv">Check out some <em>of my work.</em></h2>
 <p class="lead rv">Designing products around real-world problems.</p>
 <div class="stack">
-<article class="wk rv"><span class="no">01</span><span class="yr">2026</span><div class="vis"><img class="shotimg" src="assets/cs/card.webp" alt="Laxmi Dental ordering dashboard" loading="lazy" decoding="async"></div><div class="body"><h3>Turning chaotic dental orders into one clean portal for 22,000+ clinics.</h3><div class="tags"><span class="tag">Healthcare</span><span class="tag">B2B Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a lab-to-doctor ordering portal that handles STL scans and custom prescriptions, cutting errors and order disputes across India’s largest dental network.</p><div class="acts"><a class="vm" href="case-study-laxmi-dental.html">View more <i>→</i></a></div></div></article>
-<article class="wk rv"><span class="no">02</span><span class="yr">2026</span><div class="vis"><div class="win"><div class="d"><i></i><i></i><i></i></div><div class="g"><u></u><u></u><u></u></div><small>Replace with your screenshot</small></div><div class="fc a"><i></i><i></i><i></i></div><div class="fc b"><i></i><i></i></div></div><div class="body"><h3>Six scattered HR tools. One connected system.</h3><div class="tags"><span class="tag">HRMS</span><span class="tag">Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a role-based HRMS that brings employee management, attendance, leave, payroll, performance and onboarding into a single source of truth.</p><div class="acts"><a class="vm" href="#">View more <i>→</i></a></div></div></article>
+<article class="wk rv"><span class="no">01</span><span class="yr">2026</span><div class="vis"><img class="shotimg mk" src="assets/cs/card.webp" alt="Laxmi Dental ordering dashboard on a laptop" loading="lazy" decoding="async"></div><div class="body"><h3>Turning chaotic dental orders into one clean portal for 22,000+ clinics.</h3><div class="tags"><span class="tag">Healthcare</span><span class="tag">B2B Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a lab-to-doctor ordering portal that handles STL scans and custom prescriptions, cutting errors and order disputes across India’s largest dental network.</p><div class="acts"><a class="vm" href="case-study-laxmi-dental.html">View more <i>→</i></a></div></div></article>
+<article class="wk rv"><span class="no">02</span><span class="yr">2026</span><div class="vis"><img class="shotimg mk" src="assets/nh/card.webp" alt="Niyuk HR dashboard on a laptop" loading="lazy" decoding="async"></div><div class="body"><h3>Five scattered HR tools. One connected system.</h3><div class="tags"><span class="tag">HRMS</span><span class="tag">Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a role-based HRMS that brings employee management, attendance, leave, payroll, performance and onboarding into a single source of truth.</p><div class="acts"><a class="vm" href="case-study-niyuk-hr.html">View more <i>→</i></a></div></div></article>
 <article class="wk rv"><span class="no">03</span><span class="yr">2025</span><div class="vis"><div class="ph"><div>Replace with your app screens</div></div><div class="fc a"><i></i><i></i><i></i></div><div class="fc b"><i></i><i></i></div></div><div class="body"><h3>Making EV charging simple, reliable and stress-free.</h3><div class="tags"><span class="tag">EV Charging</span><span class="tag">Mobile App</span><span class="tag">UI/UX Design</span></div><p>I redesigned the Energy Bharat app so owners can find a station, start a session, track it live and pay without switching screens.</p><div class="acts"><a class="vm" href="#">App Store <i>→</i></a><a class="vm" href="#">Play Store <i>→</i></a></div></div></article>
 </div></div></section>
 
 <section id="about"><div class="wrap">
-<p class="eyebrow rv">◦ 02 ◦ About</p>
+<p class="eyebrow rv">◦ About</p>
 <h2 class="rv">Hey, nice <em>to meet you.</em></h2>
 <div class="about2">
 <figure class="me rv fl"><div class="frame"><img src="assets/me.webp" alt="Digvijay Patil smiling in a black and white portrait" width="900" height="900"><span class="tint"></span></div><figcaption><span id="seen">Seen in Pune</span><span>PUNE · IN</span></figcaption></figure>
@@ -413,7 +428,7 @@ step();
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<p class="eyebrow rv">◦ 03 ◦ Experience</p>
+<p class="eyebrow rv">◦ Experience</p>
 <h2 class="rv">A short list <em>of long days.</em></h2>
 <div class="xp rv">
 <div class="row"><small>Jul 2023 — Now</small><div><h4>Sphinx Solutions</h4><span class="muted">UI/UX Designer</span></div><small>Current</small></div>
@@ -422,14 +437,14 @@ step();
 </div></div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<p class="eyebrow rv">◦ The method ◦</p>
+<p class="eyebrow rv">◦ The method</p>
 <h2 class="rv">How I build <em>products.</em></h2>
 <div class="method rv"><div class="step"><span>01</span><b>Understand</b></div><div class="step"><span>02</span><b>Explore</b></div><div class="step"><span>03</span><b>Define</b></div><div class="step"><span>04</span><b>Design</b></div><div class="step"><span>05</span><b>Validate</b></div><div class="step"><span>06</span><b>Refine</b></div></div>
 <p class="lead rv">I start by understanding the problem before jumping into the solution. I explore different possibilities, define the experience, design and prototype the solution, then refine it through feedback and usability thinking.</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<p class="eyebrow rv">◦ 04 ◦ Outside the workspace</p>
+<p class="eyebrow rv">◦ Outside the workspace</p>
 <h2 class="rv">When the laptop's <em>closed.</em></h2>
 <div class="bento rv">
 <div class="tile a"><small>Trekking</small><h3>Slow climbs, big views.</h3></div>
@@ -439,7 +454,7 @@ step();
 </div></div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<p class="eyebrow rv">◦ 05 ◦ Testimonials</p>
+<p class="eyebrow rv">◦ Testimonials</p>
 <h2 class="rv">What people say <em>about me.</em></h2>
 <p class="lead rv">A few words from people I've designed with, shipped alongside, and problem-solved next to.</p></div>
 <div class="marq"><div class="track" id="track">
@@ -449,10 +464,10 @@ step();
 </div></div></section>
 
 <section id="contact" class="end"><div class="wrap">
-<p class="eyebrow rv">◦ 06 ◦ Let's make something</p>
+<p class="eyebrow rv">◦ Let's make something</p>
 <h2 class="rv">Let's build something <em>meaningful</em> together.</h2>
-<a class="btn dark rv" href="mailto:digvijaypatil03031999@gmail.com">Let's talk</a>
-<div class="soc rv"><a href="tel:8600687982">8600687982</a><a href="mailto:digvijaypatil03031999@gmail.com">digvijaypatil03031999@gmail.com</a><a href="#">DigvijayPatil</a><a href="#">Resume</a></div>
+<a class="btn dark rv" href="mailto:digvijaypatil2525@gmail.com">Let's talk</a>
+<div class="soc rv"><a href="tel:8600687982"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>8600687982</a><a href="mailto:digvijaypatil2525@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>digvijaypatil2525@gmail.com</a><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a></div>
 </div></section>
 </main>
 <footer><div class="wrap"><span>© 2026 Digvijay Patil Portfolio. All rights reserved.</span><span>v1.0 · Last updated Oct 2026</span></div></footer>
@@ -486,7 +501,7 @@ document.querySelectorAll('.rv').forEach(function(el){io2.observe(el)});
 document.querySelectorAll('.step,.tile,.quote').forEach(function(el){el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 // scroll progress + portrait parallax
 var p=document.getElementById('prog'),st=document.getElementById('stage');
-function sc(){var h=document.documentElement.scrollHeight-innerHeight;p.style.transform='scaleX('+(h>0?scrollY/h:0)+')';if(!rm&&scrollY<900)st.style.setProperty('--py',(scrollY*.12)+'px')}
+function sc(){var h=document.documentElement.scrollHeight-innerHeight;if(!rm&&scrollY<900)st.style.setProperty('--py',(scrollY*.12)+'px')}
 addEventListener('scroll',sc,{passive:true});sc();
 // portrait tilt on desktop
 if(!rm&&matchMedia('(hover:hover)').matches){var h=document.querySelector('.hero');h.addEventListener('pointermove',function(e){var r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;st.style.setProperty('--ry',(x*10)+'deg');st.style.setProperty('--rx',(-y*6)+'deg')});h.addEventListener('pointerleave',function(){st.style.setProperty('--ry','0deg');st.style.setProperty('--rx','0deg')})}
@@ -573,6 +588,25 @@ nav.querySelectorAll('.pill a').forEach(function(a){a.addEventListener('click',f
 document.addEventListener('click',function(e){if(!nav.contains(e.target))set(false)});
 addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
 addEventListener('resize',function(){if(innerWidth>820)set(false)});
+})();
+</script>
+<script>(function(){var n=document.getElementById('nav');if(!n)return;function f(){n.classList.toggle('scrolled',scrollY>8)}addEventListener('scroll',f,{passive:true});f()})();</script>
+<script>
+/* scroll-linked word reveal for the What I do statement only */
+(function(){
+var el=document.querySelector('.big');
+if(!el||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var words=[];
+function wrap(node){Array.prototype.slice.call(node.childNodes).forEach(function(c){
+if(c.nodeType===3){var fr=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t)){fr.appendChild(document.createTextNode(t))}else{var s=document.createElement('span');s.className='rw';s.textContent=t;words.push(s);fr.appendChild(s)}});node.replaceChild(fr,c)}
+else if(c.nodeType===1)wrap(c)})}
+wrap(el);
+var tick=false;
+function upd(){tick=false;var r=el.getBoundingClientRect(),vh=innerHeight,start=vh*.88,endTop=vh*.42-r.height;
+var p=Math.max(0,Math.min(1,(start-r.top)/(start-endTop)));var n=Math.round(p*words.length);
+for(var i=0;i<words.length;i++)words[i].classList.toggle('on',i<n)}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+addEventListener('resize',upd);upd();
 })();
 </script>
 </body>
