@@ -9,6 +9,7 @@ A multi-page portfolio built with plain HTML, CSS and JavaScript. No build step 
 | `index.html` | Homepage |
 | `case-study-laxmi-dental.html` | Case study 01: Laxmi Dental (dental B2B ordering) |
 | `case-study-niyuk-hr.html` | Case study 02: Niyuk HR (HR SaaS) |
+| `resume.pdf` | Resume (opened by the Resume buttons) |
 
 ## Structure
 
@@ -19,6 +20,8 @@ case-study-niyuk-hr.html
 assets/              portrait and About photo
 assets/cs/           Laxmi Dental case study images
 assets/nh/           Niyuk HR case study images
+assets/ev/           EV charging card image
+assets/outside/      Outside the workspace photos
 favicon.ico, favicon-*.png, apple-touch-icon.png, android-chrome-*.png, site.webmanifest
 ```
 
@@ -36,5 +39,4 @@ Repo Settings → Pages → Deploy from a branch → `main` / root.
 
 ## To finish
 
-- Add the LinkedIn and Résumé URLs (currently `#`)
 - Add the EV charging (Energy Bharat) case study and link its card

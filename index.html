@@ -360,6 +360,27 @@ nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-bac
 /* what-i-do scroll text reveal */
 .big .rw{opacity:.16;transition:opacity .3s linear}
 .big .rw.on{opacity:1}
+.vis .shotimg.mk.sq{width:auto;max-width:100%;max-height:360px;height:auto}
+/* outside the workspace photos */
+.bento{grid-auto-rows:260px}
+.tile.pic{padding:0;min-height:0;border:0;color:#fff;background:#111}
+.tile.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.tile.pic:hover img{transform:scale(1.05)}
+.tile.pic::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.75))}
+.tile.pic::after{z-index:3}
+.tile.pic .cap{position:relative;z-index:2;padding:26px}
+.tile.pic small{opacity:.85}
+.tile.pic h3{font-size:clamp(20px,2vw,26px);margin-top:6px}
+.tile.p1,.tile.p4{grid-column:span 2}.tile.p2,.tile.p3{grid-row:span 2}
+@media(max-width:1024px){.bento{grid-auto-rows:240px}.tile.p1,.tile.p4{grid-column:span 2}}
+@media(max-width:560px){.bento{grid-auto-rows:auto}.tile.pic{min-height:300px;grid-column:auto!important;grid-row:auto!important}.tile.p2,.tile.p3{min-height:440px}.tile.pic .cap{padding:20px}}
+/* about: image aligned with content */
+.about2{align-items:stretch}
+.me{display:flex;flex-direction:column}
+.me .frame{position:relative;flex:1;min-height:380px}
+.me .frame img{position:absolute;left:14px;top:14px;width:calc(100% - 28px);height:calc(100% - 28px);aspect-ratio:auto;object-position:50% 72%}
+@media(max-width:820px){.me .frame{flex:none;aspect-ratio:1;min-height:0}}
+@media(max-width:560px){.me .frame img{left:10px;top:10px;width:calc(100% - 20px);height:calc(100% - 20px)}}
 </style>
 </head>
 <body>
@@ -380,9 +401,9 @@ step();
 </script>
 
 <nav id="nav"><div class="wrap bar">
-<a href="#top" class="brand"><span class="mk">D</span>Digvijay Patil<span class="tagline">— UI/UX Designer</span></a>
+<a href="#top" class="brand"><span class="mk">D</span>Digvijay Patil</a>
 <div class="pill"><a href="#top">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-<div class="btns"><a class="btn res" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a><button class="btn th" id="theme" aria-label="Toggle theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button class="btn th menu" id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+<div class="btns"><a class="btn res" href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a><button class="btn th" id="theme" aria-label="Toggle theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button class="btn th menu" id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
 </div></nav>
 
 <main id="top">
@@ -397,7 +418,7 @@ step();
 <section style="padding-top:60px"><div class="wrap">
 <p class="eyebrow rv">◦ What I do</p>
 <p class="big rv">I turn complex problems into simple, intuitive digital <em>experiences</em> — designing products that are easy to understand, built to scale, and focused on what truly matters to users and businesses.</p>
-<div class="stats rv"><div class="stat"><b>3+</b>Years designing<p class="muted">AI-powered SaaS and enterprise products.</p></div><div class="stat"><b>15+</b>Products shipped<p class="muted">Across Healthtech, HRMS, fintech &amp; more at Sphinx Solutions.</p></div></div>
+<div class="stats rv"><div class="stat"><b>3+</b>Years designing<p class="muted">AI-powered SaaS and enterprise products.</p></div><div class="stat"><b>15+</b>Products shipped<p class="muted">Across Healthtech, HRMS, fintech &amp; more.</p></div></div>
 </div></section>
 
 <section id="work"><div class="wrap">
@@ -407,7 +428,7 @@ step();
 <div class="stack">
 <article class="wk rv"><span class="no">01</span><span class="yr">2026</span><div class="vis"><img class="shotimg mk" src="assets/cs/card.webp" alt="Laxmi Dental ordering dashboard on a laptop" loading="lazy" decoding="async"></div><div class="body"><h3>Turning chaotic dental orders into one clean portal for 22,000+ clinics.</h3><div class="tags"><span class="tag">Healthcare</span><span class="tag">B2B Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a lab-to-doctor ordering portal that handles STL scans and custom prescriptions, cutting errors and order disputes across India’s largest dental network.</p><div class="acts"><a class="vm" href="case-study-laxmi-dental.html">View more <i>→</i></a></div></div></article>
 <article class="wk rv"><span class="no">02</span><span class="yr">2026</span><div class="vis"><img class="shotimg mk" src="assets/nh/card.webp" alt="Niyuk HR dashboard on a laptop" loading="lazy" decoding="async"></div><div class="body"><h3>Five scattered HR tools. One connected system.</h3><div class="tags"><span class="tag">HRMS</span><span class="tag">Web App</span><span class="tag">UI/UX Design</span></div><p>I designed a role-based HRMS that brings employee management, attendance, leave, payroll, performance and onboarding into a single source of truth.</p><div class="acts"><a class="vm" href="case-study-niyuk-hr.html">View more <i>→</i></a></div></div></article>
-<article class="wk rv"><span class="no">03</span><span class="yr">2025</span><div class="vis"><div class="ph"><div>Replace with your app screens</div></div><div class="fc a"><i></i><i></i><i></i></div><div class="fc b"><i></i><i></i></div></div><div class="body"><h3>Making EV charging simple, reliable and stress-free.</h3><div class="tags"><span class="tag">EV Charging</span><span class="tag">Mobile App</span><span class="tag">UI/UX Design</span></div><p>I redesigned the Energy Bharat app so owners can find a station, start a session, track it live and pay without switching screens.</p><div class="acts"><a class="vm" href="#">App Store <i>→</i></a><a class="vm" href="#">Play Store <i>→</i></a></div></div></article>
+<article class="wk rv"><span class="no">03</span><span class="yr">2025</span><div class="vis"><img class="shotimg mk sq" src="assets/ev/card.webp" alt="Energi Bharat app icon and splash screen on two phones" loading="lazy" decoding="async"></div><div class="body"><h3>Making EV charging simple, reliable and stress-free.</h3><div class="tags"><span class="tag">EV Charging</span><span class="tag">Mobile App</span><span class="tag">UI/UX Design</span></div><p>I redesigned the Energy Bharat app so owners can find a station, start a session, track it live and pay without switching screens.</p><div class="acts"><a class="vm" href="https://apps.apple.com/in/app/energi-bharat-your-ev-energy/id6746481597" target="_blank" rel="noopener">App Store <i>→</i></a><a class="vm" href="https://play.google.com/store/apps/details?id=com.energybharat" target="_blank" rel="noopener">Play Store <i>→</i></a></div></div></article>
 </div></div></section>
 
 <section id="about"><div class="wrap">
@@ -416,9 +437,8 @@ step();
 <div class="about2">
 <figure class="me rv fl"><div class="frame"><img src="assets/me.webp" alt="Digvijay Patil smiling in a black and white portrait" width="900" height="900"><span class="tint"></span></div><figcaption><span id="seen">Seen in Pune</span><span>PUNE · IN</span></figcaption></figure>
 <div class="bio rv fr">
-<p>Product-focused UI/UX Designer with 5+ years of design experience, including 3+ years in digital product design across mobile apps and web platforms in FinTech, HealthTech, HRMS, SaaS, EdTech, Hospitality, and other domains.</p>
-<p>Experienced in taking products from user flows and wireframes through high fidelity UI, interactive prototypes, design systems, and developer handoff. Contributed to 15+ products shipped to production, with a focus on simplifying complex workflows, improving usability, and creating scalable design solutions for mobile applications and responsive web experiences.</p>
-<p>Outside of work, I enjoy cricket, trekking, and traveling — experiences that keep me active, curious, and connected with the world around me.</p>
+<p>My journey into design started with graphic design, where I spent years exploring visual communication, branding, and freelance projects. During college, I expanded into website design, email campaigns, and social media creatives, building a strong foundation in visual design and understanding how people interact with digital experiences.</p>
+<p>Today, I focus on designing consumer and enterprise products, turning complex workflows into experiences that feel simple, intuitive, and purposeful. I enjoy working at the intersection of user needs, business goals, and technical constraints to create solutions that are not only visually polished but also solve real problems.</p>
 <div class="chips"><span class="chip">Award Winning</span><span class="chip">User Focused</span><span class="chip">Team Player</span></div>
 <div class="sigline"></div>
 <div class="sig">Digvijay Patil</div>
@@ -447,10 +467,10 @@ step();
 <p class="eyebrow rv">◦ Outside the workspace</p>
 <h2 class="rv">When the laptop's <em>closed.</em></h2>
 <div class="bento rv">
-<div class="tile a"><small>Trekking</small><h3>Slow climbs, big views.</h3></div>
-<div class="tile b"><small>Cricket</small><h3>Weekend matches.</h3></div>
-<div class="tile"><small>Travel</small><h3>New places.</h3></div>
-<div class="tile c"><small>Add your own</small><h3>Photos, a Spotify track, or a stat that shows who you are.</h3></div>
+<div class="tile pic p1"><img src="assets/outside/p1.webp" alt="Digvijay trekking on a ridge at sunset" style="object-position:50% 62%" loading="lazy" decoding="async"><div class="cap"><small>Trekking</small><h3>Chasing sunsets from the ridge.</h3></div></div>
+<div class="tile pic p2"><img src="assets/outside/p2.webp" alt="Digvijay smiling with a Best Batsman trophy after a cricket match" style="object-position:30% 38%" loading="lazy" decoding="async"><div class="cap"><small>Cricket</small><h3>Best Batsman, SPL-2024.</h3></div></div>
+<div class="tile pic p3"><img src="assets/outside/p3.webp" alt="Digvijay in a blue rain jacket on a misty monsoon trail with waterfalls behind" style="object-position:85% 60%" loading="lazy" decoding="async"><div class="cap"><small>Monsoon trails</small><h3>Mist, waterfalls, muddy trails.</h3></div></div>
+<div class="tile pic p4"><img src="assets/outside/p4.webp" alt="Digvijay and friends in a red raft on a river" style="object-position:50% 55%" loading="lazy" decoding="async"><div class="cap"><small>Adventure</small><h3>Rafting with the crew.</h3></div></div>
 </div></div></section>
 
 <section style="padding-top:0"><div class="wrap">
@@ -467,7 +487,7 @@ step();
 <p class="eyebrow rv">◦ Let's make something</p>
 <h2 class="rv">Let's build something <em>meaningful</em> together.</h2>
 <a class="btn dark rv" href="mailto:digvijaypatil2525@gmail.com">Let's talk</a>
-<div class="soc rv"><a href="tel:8600687982"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>8600687982</a><a href="mailto:digvijaypatil2525@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>digvijaypatil2525@gmail.com</a><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a></div>
+<div class="soc rv"><a href="tel:8600687982"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>8600687982</a><a href="mailto:digvijaypatil2525@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>digvijaypatil2525@gmail.com</a><a href="https://www.linkedin.com/in/digvijay-patil-01784621a/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a><a href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>Resume</a></div>
 </div></section>
 </main>
 <footer><div class="wrap"><span>© 2026 Digvijay Patil Portfolio. All rights reserved.</span><span>v1.0 · Last updated Oct 2026</span></div></footer>
